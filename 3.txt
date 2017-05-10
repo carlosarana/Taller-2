@@ -1,0 +1,142 @@
+package ejercicio;
+
+public class Persona {
+     private String nombre;
+     private String direccion;
+     private String telefono;
+     private String email;
+     
+    public Persona (){}
+      
+    public Persona (String nomb,String direcc,String telef,String email){
+       super ();
+       this.nombre = nomb;
+       this.direccion = direcc;
+       this.telefono = telef;
+       this.email = email;
+    }
+
+   
+    public String getNombre() {
+        return nombre;
+    }
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+
+package ejercicio;
+
+public class Estudiante extends Persona {
+    private static int estatus = 4;
+    
+    public Estudiante () {}
+    
+    public Estudiante (int estatus,String nombre,String direccion,String telefono,String email){
+           super (nombre,direccion,telefono,email);
+           this.status = estatus;
+    }
+
+    public static int getEstatus() {
+        return status;
+    }
+    public static void setEstatus(int aStatus) {
+        estatus = estatus;
+    }
+    
+}
+
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
+
+package ejercicio;
+
+import java.util.Date;
+
+public class Empleado extends Persona {
+    private double salario;
+    private Date fechaEntrega;
+    
+    public Empleado () {}
+    
+    public Empleado (double salario, Date fechaEntrega,String nombre,String direccion,String telefono,
+                   String email ){
+        super (nombre,direccion,telefono,email);
+        this.salario = salario ;
+        this.fechaEntrega = fechaEntrega;
+    }
+
+    public double getSalario() {
+        return salario;
+    }
+
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
+
+    public Date getFechaEntrega() {
+        return fechaEntrega;
+    }
+
+    public void setFechaEntrega(Date fechaEntrega) {
+        this.fechaEntrega = fechaEntrega;
+    }
+    
+    
+}
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    
+    
+}
+
+
+package ejercicio;
+
+public class Personal extends Estudiante {
+    
+    public Personal (){}
+    
+    public Personal (int estatus,String nombre,String direccion,String telefono,String email){
+                 super (estatus,nombre,direccion,telefono,email);
+
+    }
+}
+
+
+package ejercicio;
+
+import java.util.Date;
+
+public class Profesor extends Empleado {
+    
+    public Profesor () {}
+     
+    public Profesor (double salario, Date fechaEntrega,String nombre,String direccion,String telefono,
+                   String email){
+                super (salario,fechaEntrega,nombre,direccion,telefono,email);
+
+    } 
+}
+
